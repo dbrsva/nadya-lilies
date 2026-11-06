@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2F020C">
+  <title>Наде — красивее цветущих лилий</title>
+  <meta name="description" content="Письмо для Нади">
+  <link rel="icon" href="stickers/button-heart-pink.webp">
+
+  <!-- Шрифты:
+       Dela Gothic One — жирный «пухлый» шрифт для заголовков
+       Pacifico        — скриптовые акценты и подписи
+       Rubik           — основной текст писем -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Pacifico&family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="stickers/lily.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-heart" viewBox="0 0 32 32"><path d="M16 28C6 20 3 14 6 9c3-4 8-3 10 1 2-4 7-5 10-1 3 5 0 11-10 19z"/></symbol>
+    <!-- звезда-бейдж, как «Join Us!» в референсе -->
+    <symbol id="i-burst" viewBox="0 0 100 100"><path d="M50 0l7 16 15-9 1 18 17-3-6 16 16 7-14 11 11 13-17 4 4 17-17-4-3 17-14-10-10 14-8-15-15 8 1-17-17-3 10-14L0 50l15-9-8-16 17 2 1-17 15 8z"/></symbol>
+  </svg>
+
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ===================================================================
+         ПРОЛОГ — первый комплимент
+         =================================================================== -->
+    <section class="hero" id="top">
+      <img class="st st--cupid-aim" src="stickers/cupid-aim.webp" alt="" aria-hidden="true" width="599" height="600">
+      <img class="st st--hero-btn1" src="stickers/button-heart-pink.webp" alt="" aria-hidden="true">
+      <img class="st st--hero-btn2" src="stickers/button-star-cream.webp" alt="" aria-hidden="true">
+
+      <p class="pill hero__pill">для Нади</p>
+
+      <h1 class="hero__title" aria-label="Твой лик красивее цветущих лилий">
+        <span class="line" style="--i:0">Твой лик</span>
+        <span class="line line--pink" style="--i:1">красивее</span>
+        <span class="line" style="--i:2">цветущих</span>
+        <span class="line line--pink line--lily" style="--i:3">лилий
+          <img class="hero__lily" src="stickers/lily.webp" alt="" aria-hidden="true" width="295" height="315">
+        </span>
+      </h1>
+
+      <p class="script hero__note">первое, что я тебе сказал</p>
+
+      <button class="btn btn--cream" id="open-btn" type="button">
+        <span>Открыть письмо</span>
+        <small>♪ вместе с музыкой</small>
+      </button>
+
+      <!-- едва заметная надпись -->
+      <p class="script hero__love">я люблю тебя</p>
+    </section>
+
+
+    <!-- ===================================================================
+         ГЛАВА I — Надя
+         =================================================================== -->
+    <section class="chapter" id="ch1">
+      <header class="head reveal">
+        <span class="head__num">глава I</span>
+        <h2 class="head__title">Надя</h2>
+      </header>
+
+      <div class="letter">
+        <figure class="frame frame--portrait reveal">
+          <img src="photos/nadya-portrait.jpg" alt="Надя" width="800" height="716" loading="lazy" decoding="async" data-lightbox data-caption="моя Надя" style="object-position:45% 30%">
+          <figcaption class="pill pill--pink">моя Надя</figcaption>
+          <img class="st st--pin-tl" src="stickers/button-flower-pink.webp" alt="" aria-hidden="true">
+          <img class="st st--pin-br" src="stickers/button-heart-cream.webp" alt="" aria-hidden="true">
+        </figure>
+
+        <div class="card reveal">
+          <p>Знаешь, я тогда ничего не придумывал. Не готовил красивых слов. Я просто посмотрел на тебя и сказал вслух то, что увидел.</p>
+          <p>Лилии правда красивые. Но они не смеются так, как ты. Не щурятся от солнца, не поправляют волосы, не смотрят на меня так, что я забываю, о чём говорил.</p>
+          <p>С тех пор я сказал тебе очень много слов. Но эти пять так и остались моими любимыми — потому что с них всё началось.</p>
+          <img class="st st--card-flower" src="stickers/alstroemeria.webp" alt="" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         ГЛАВА II — Мы  (наша история в фотографиях)
+         Чтобы заменить фото — положи файл в photos/ и поменяй src.
+         width/height — реальные размеры фото (чтобы страница не «прыгала»).
+         =================================================================== -->
+    <section class="chapter chapter--stripes" id="ch2">
+      <header class="head reveal">
+        <span class="head__num">глава II</span>
+        <h2 class="head__title">Мы</h2>
+        <p class="head__lead">Я не умею красиво хранить воспоминания, поэтому сложил их сюда. Это моменты, в которые я был счастлив — и знал об этом.</p>
+      </header>
+
+      <div class="story">
+        <div class="pair reveal">
+          <figure class="polaroid tilt-l">
+            <img src="photos/us-01.jpg" alt="Мы вместе" width="1100" height="820" loading="lazy" decoding="async" data-lightbox data-caption="ты делаешь вид, что не замечаешь поцелуя">
+            <figcaption>ты делаешь вид, что не замечаешь поцелуя</figcaption>
+            <img class="st st--pin" src="stickers/button-pink-dots.webp" alt="" aria-hidden="true">
+          </figure>
+          <figure class="polaroid tilt-r">
+            <img src="photos/us-02.jpg" alt="Мы вместе" width="1100" height="820" loading="lazy" decoding="async" data-lightbox data-caption="а через секунду я уже не могу быть серьёзным">
+            <figcaption>а через секунду я уже не могу быть серьёзным</figcaption>
+            <img class="st st--pin" src="stickers/button-brown-pink.webp" alt="" aria-hidden="true">
+          </figure>
+        </div>
+
+        <blockquote class="note reveal">
+          С тобой я перестал притворяться. Можно быть смешным, уставшим, растерянным — и всё равно чувствовать, что меня любят.
+          <img class="st st--note" src="stickers/button-heart-pink.webp" alt="" aria-hidden="true">
+        </blockquote>
+
+        <figure class="polaroid polaroid--tall tilt-r reveal">
+          <img src="photos/us-03.jpg" alt="Мы летом" width="771" height="1027" loading="lazy" decoding="async" data-lightbox data-caption="лето, тёплое, как ты">
+          <figcaption>лето, тёплое, как ты</figcaption>
+          <img class="st st--pin" src="stickers/button-flower-pink.webp" alt="" aria-hidden="true">
+          <img class="st st--side-flower" src="stickers/hibiscus.webp" alt="" aria-hidden="true">
+        </figure>
+
+        <figure class="polaroid tilt-l reveal">
+          <img src="photos/us-04.jpg" alt="Мы вместе" width="1100" height="797" loading="lazy" decoding="async" data-lightbox data-caption="наши ленивые вечера — моё любимое время суток">
+          <figcaption>наши ленивые вечера — моё любимое время суток</figcaption>
+          <img class="st st--pin" src="stickers/button-plaid.webp" alt="" aria-hidden="true">
+        </figure>
+
+        <figure class="polaroid tilt-r reveal">
+          <img src="photos/us-05.jpg" alt="Мы вместе" width="1100" height="797" loading="lazy" decoding="async" data-lightbox data-caption="один твой поцелуй — и я снова самый счастливый">
+          <figcaption>один твой поцелуй — и я снова самый счастливый</figcaption>
+          <img class="st st--pin" src="stickers/button-star-pink.webp" alt="" aria-hidden="true">
+        </figure>
+
+        <blockquote class="note note--cream reveal">
+          Я дорожу даже самыми обычными днями с тобой. Особенно ими. Оказалось, счастье состоит именно из них.
+          <img class="st st--note" src="stickers/button-bunny.webp" alt="" aria-hidden="true">
+        </blockquote>
+
+        <div class="pair reveal">
+          <figure class="polaroid tilt-r">
+            <img src="photos/us-06.jpg" alt="Мы вместе" width="778" height="988" loading="lazy" decoding="async" data-lightbox data-caption="здесь я остался бы навсегда">
+            <figcaption>здесь я остался бы навсегда</figcaption>
+            <img class="st st--pin" src="stickers/button-flower-white.webp" alt="" aria-hidden="true">
+          </figure>
+          <figure class="polaroid tilt-l pair__low">
+            <img src="photos/us-07.jpg" alt="Мы вместе" width="781" height="1035" loading="lazy" decoding="async" data-lightbox data-caption="в этом свете я понял, что пропал окончательно">
+            <figcaption>в этом свете я понял, что пропал</figcaption>
+            <img class="st st--pin" src="stickers/button-stripes.webp" alt="" aria-hidden="true">
+          </figure>
+        </div>
+
+        <figure class="polaroid polaroid--wide tilt-l reveal">
+          <img src="photos/us-08.jpg" alt="Мы вместе" width="1080" height="770" loading="lazy" decoding="async" data-lightbox data-caption="и каждый раз — как в первый">
+          <figcaption>и каждый раз — как в первый</figcaption>
+          <img class="st st--pin" src="stickers/button-heart-cream.webp" alt="" aria-hidden="true">
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         ГЛАВА III — Ты  (листаемая лента её фотографий)
+         =================================================================== -->
+    <section class="chapter" id="ch3">
+      <img class="st st--gladiolus" src="stickers/gladiolus.webp" alt="" aria-hidden="true">
+      <header class="head reveal">
+        <span class="head__num">глава III</span>
+        <h2 class="head__title">Ты</h2>
+        <p class="head__lead">Я могу смотреть на тебя бесконечно. Вот небольшое доказательство — листай.</p>
+      </header>
+
+      <div class="reel reveal">
+        <div class="reel__track" id="reel">
+          <!-- object-position — какая часть фото видна в карточке (x% y%) -->
+          <figure class="reel__item"><img src="photos/nadya-01.jpg" alt="Надя улыбается" loading="lazy" decoding="async" data-lightbox="her" data-caption="эта улыбка — причина половины моих хороших дней" style="object-position:30% 30%"><figcaption>эта улыбка — причина половины моих хороших дней</figcaption></figure>
+          <figure class="reel__item"><img src="photos/nadya-02.jpg" alt="Надя" loading="lazy" decoding="async" data-lightbox="her" data-caption="воздушный поцелуй, который я поймал" style="object-position:42% 20%"><figcaption>воздушный поцелуй, который я поймал</figcaption></figure>
+          <figure class="reel__item"><img src="photos/nadya-03.jpg" alt="Надя в поле" loading="lazy" decoding="async" data-lightbox="her" data-caption="даже небо хмурится, когда тебя нет рядом" style="object-position:50% 60%"><figcaption>даже небо хмурится, когда тебя нет рядом</figcaption></figure>
+          <figure class="reel__item"><img src="photos/nadya-04.jpg" alt="Надя в серебряных украшениях" loading="lazy" decoding="async" data-lightbox="her" data-caption="в серебре — как героиня старинной легенды" style="object-position:35% 50%"><figcaption>в серебре — как героиня легенды</figcaption></figure>
+          <figure class="reel__item"><img src="photos/nadya-05.jpg" alt="Надя подмигивает" loading="lazy" decoding="async" data-lightbox="her" data-caption="подмигнула — и я влюбился ещё раз" style="object-position:60% 50%"><figcaption>подмигнула — и я влюбился ещё раз</figcaption></figure>
+          <figure class="reel__item"><img src="photos/nadya-06.jpg" alt="Надя" loading="lazy" decoding="async" data-lightbox="her" data-caption="свет, который ты носишь с собой" style="object-position:50% 50%"><figcaption>свет, который ты носишь с собой</figcaption></figure>
+          <figure class="reel__item"><img src="photos/nadya-07.jpg" alt="Надя" loading="lazy" decoding="async" data-lightbox="her" data-caption="фирменное «чмок» в каждом зеркале" style="object-position:48% 50%"><figcaption>фирменное «чмок» в каждом зеркале</figcaption></figure>
+          <figure class="reel__item"><img src="photos/nadya-08.jpg" alt="Надя" loading="lazy" decoding="async" data-lightbox="her" data-caption="как вообще можно быть такой красивой?" style="object-position:40% 40%"><figcaption>как можно быть такой красивой?</figcaption></figure>
+        </div>
+        <div class="reel__nav">
+          <button class="round-btn" id="reel-prev" type="button" aria-label="Предыдущее фото">‹</button>
+          <div class="reel__dots" id="reel-dots" aria-hidden="true"></div>
+          <button class="round-btn" id="reel-next" type="button" aria-label="Следующее фото">›</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         ГЛАВА IV — Почему ты  (пуговицы, которые раскрывают причины)
+         Текст причины — внутри <p class="reason__text">
+         =================================================================== -->
+    <section class="chapter" id="ch4">
+      <header class="head reveal">
+        <span class="head__num">глава IV</span>
+        <h2 class="head__title">Почему ты</h2>
+        <p class="head__lead">Шесть пуговиц — шесть маленьких причин. Нажимай на каждую.</p>
+      </header>
+
+      <div class="reasons" id="reasons">
+        <button class="reason reveal" type="button" aria-pressed="false">
+          <span class="reason__face reason__front"><img src="stickers/button-heart-pink.webp" alt=""><b>01</b></span>
+          <span class="reason__face reason__back"><p class="reason__text">Ты смеёшься так, что хочется смеяться вместе, даже не зная над чем.</p></span>
+        </button>
+        <button class="reason reveal" type="button" aria-pressed="false">
+          <span class="reason__face reason__front"><img src="stickers/button-star-cream.webp" alt=""><b>02</b></span>
+          <span class="reason__face reason__back"><p class="reason__text">Ты щуришь один глаз на фото — и это самое милое, что я видел.</p></span>
+        </button>
+        <button class="reason reveal" type="button" aria-pressed="false">
+          <span class="reason__face reason__front"><img src="stickers/button-flower-pink.webp" alt=""><b>03</b></span>
+          <span class="reason__face reason__back"><p class="reason__text">С тобой даже молчать тепло.</p></span>
+        </button>
+        <button class="reason reveal" type="button" aria-pressed="false">
+          <span class="reason__face reason__front"><img src="stickers/button-heart-cream.webp" alt=""><b>04</b></span>
+          <span class="reason__face reason__back"><p class="reason__text">Ты делаешь меня лучше и ни разу об этом не попросила.</p></span>
+        </button>
+        <button class="reason reveal" type="button" aria-pressed="false">
+          <span class="reason__face reason__front"><img src="stickers/button-flower-cream.webp" alt=""><b>05</b></span>
+          <span class="reason__face reason__back"><p class="reason__text">Твои волосы теперь у меня везде. И я совсем не против.</p></span>
+        </button>
+        <button class="reason reveal" type="button" aria-pressed="false">
+          <span class="reason__face reason__front"><img src="stickers/button-star-pink.webp" alt=""><b>06</b></span>
+          <span class="reason__face reason__back"><p class="reason__text">Рядом с тобой я дома — где бы мы ни были.</p></span>
+        </button>
+      </div>
+
+      <p class="reasons__counter" id="reasons-counter">открыто 0 из 6</p>
+      <p class="reasons__done script" id="reasons-done">это только шесть. остальные — каждый день</p>
+    </section>
+
+
+    <!-- ===================================================================
+         ГЛАВА V — Финал: поздравление
+         =================================================================== -->
+    <section class="finale" id="ch5">
+      <img class="st st--cupid-hit" src="stickers/cupid-hit.webp" alt="" aria-hidden="true" width="600" height="586">
+
+      <div class="burst finale__burst reveal" aria-hidden="true">
+        <svg><use href="#i-burst"/></svg>
+        <span>08.11</span>
+      </div>
+
+      <h2 class="finale__title reveal">
+        <span class="finale__big">С днём<br>рождения,</span>
+        <span class="script finale__name">Надя</span>
+      </h2>
+
+      <div class="finale__card reveal">
+        <p>Я не хочу желать тебе чего-то общего. Я хочу, чтобы этот год был тёплым, как твои ладони, смелым, как твой взгляд, и светлым, как твоя улыбка.</p>
+        <p>Чтобы ты чаще смеялась до слёз и реже уставала. Чтобы у тебя получалось всё, что ты задумала. И чтобы ты всегда помнила: есть человек, который смотрит на тебя так же, как в тот самый первый раз.</p>
+        <p><b>Спасибо, что ты есть. Спасибо, что ты — моя.</b></p>
+      </div>
+
+      <p class="finale__lily reveal">Ты всё ещё красивее<br>цветущих лилий.</p>
+      <p class="script finale__every reveal">каждый день</p>
+
+      <button class="btn btn--cherry reveal" id="love-btn" type="button">
+        <svg aria-hidden="true"><use href="#i-heart"/></svg>
+        <span>Нажми, если ты моя</span>
+      </button>
+      <p class="script finale__answer" id="love-answer" aria-live="polite">я знал. люблю тебя — очень</p>
+
+      <div class="bouquet reveal" aria-hidden="true">
+        <img src="stickers/gladiolus.webp" alt="" class="b1">
+        <img src="stickers/alstroemeria.webp" alt="" class="b2">
+        <img src="stickers/lily.webp" alt="" class="b3">
+        <img src="stickers/lotus.webp" alt="" class="b4">
+        <img src="stickers/hibiscus.webp" alt="" class="b5">
+      </div>
+
+      <!-- Подпись: можно дописать имя, например «навсегда твой Артём» -->
+      <p class="pill pill--cherry finale__sign">навсегда твой</p>
+
+      <a class="finale__again" href="#top">прочитать сначала ↑</a>
+    </section>
+
+  </main>
+
+
+  <!-- ============ Кнопка музыки ============ -->
+  <button class="music" id="music-btn" type="button" aria-pressed="false" aria-label="Включить музыку">
+    <span class="music__disc" aria-hidden="true"></span>
+    <span class="music__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- =====================================================================
+       🎵 МУЗЫКА: ЗАМЕНИ ФАЙЛ ЗДЕСЬ
+       src         — путь к треку
+       data-start  — с какой секунды начинать (и куда возвращаться при повторе)
+       data-end    — на какой секунде закончить кусок (пусто = до конца трека)
+
+       Сейчас стоит уже вырезанный кусок ремикса San Holo, поэтому start = 0.
+       Когда будет оригинал Frank Ocean — White Ferrari:
+         положи его в music/white-ferrari.mp3 и замени строку ниже на
+         <audio id="bg-music" src="music/white-ferrari.mp3" data-start="178" data-end="" preload="none"></audio>
+         (178 сек = 2:58 — мягкий вход перед «I'm sure we're taller in another dimension…», дальше до конца)
+       ===================================================================== -->
+  <audio id="bg-music" src="music/song.mp3" data-start="0" data-end="" preload="none"></audio>
+
+
+  <!-- ============ Просмотр фото на весь экран ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+    <button class="lightbox__close round-btn" id="lb-close" type="button" aria-label="Закрыть">×</button>
+    <button class="lightbox__arrow lightbox__arrow--prev round-btn" id="lb-prev" type="button" aria-label="Предыдущее">‹</button>
+    <figure class="lightbox__figure">
+      <img id="lb-img" alt="">
+      <figcaption class="script" id="lb-caption"></figcaption>
+    </figure>
+    <button class="lightbox__arrow lightbox__arrow--next round-btn" id="lb-next" type="button" aria-label="Следующее">›</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

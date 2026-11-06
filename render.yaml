@@ -1,0 +1,14 @@
+# Render Blueprint: бесплатный статический сайт, сборка не нужна
+services:
+  - type: web
+    name: nadya-lilies
+    runtime: static
+    buildCommand: echo "static site, no build"
+    staticPublishPath: .
+    headers:
+      - path: /photos/*
+        name: Cache-Control
+        value: public, max-age=604800
+      - path: /stickers/*
+        name: Cache-Control
+        value: public, max-age=604800
